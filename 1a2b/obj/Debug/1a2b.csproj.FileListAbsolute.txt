@@ -1,0 +1,9 @@
+D:\CSharp\1a2b\1a2b\bin\Debug\1a2b.exe.config
+D:\CSharp\1a2b\1a2b\bin\Debug\1a2b.exe
+D:\CSharp\1a2b\1a2b\bin\Debug\1a2b.pdb
+D:\CSharp\1a2b\1a2b\obj\Debug\1a2b.csprojAssemblyReference.cache
+D:\CSharp\1a2b\1a2b\obj\Debug\_1a2b.Form1.resources
+D:\CSharp\1a2b\1a2b\obj\Debug\_1a2b.Properties.Resources.resources
+D:\CSharp\1a2b\1a2b\obj\Debug\1a2b.csproj.GenerateResource.cache
+D:\CSharp\1a2b\1a2b\obj\Debug\1a2b.exe
+D:\CSharp\1a2b\1a2b\obj\Debug\1a2b.pdb
