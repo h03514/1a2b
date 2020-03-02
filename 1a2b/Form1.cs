@@ -50,6 +50,46 @@ namespace _1a2b
 		}
 		string num;
 
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+			label2.Text = "目前輸入 " + textBox1.TextLength.ToString() + " 字";
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			label3.Text = "";
+			for (int i = 1; i <= 4; i++) { label3.Text += ans[i]; }
+		}
+
+		private void textBox1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if(e.KeyCode==Keys.Enter&& button1.Enabled == true)
+			{
+				button1_Click(sender, e);
+				textBox1.Focus();
+				textBox1.SelectAll();
+				//e.SuppressKeyPress = true;
+			}
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			label2.Text = "";
+			textBox1.Text = "";
+			textBox2.Text = "";
+			label3.Text = "";
+			button1.Enabled = true;
+			for (int i = 0; i < 10; i++)
+			{
+				r = random.Next(0, 10 - i);
+				tmp = ans[r];
+				ans[r] = ans[9 - i];
+				ans[9 - i] = tmp;
+			}
+			for (int j = 1; j <= 4; j++)
+			{ gnum[j] = ""; }
+		}
+
 		private void button1_Click(object sender, EventArgs e)
 		{
 			int a = 0, b = 0;

@@ -44,6 +44,8 @@
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(100, 22);
 			this.textBox1.TabIndex = 0;
+			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
 			// 
 			// button1
 			// 
@@ -63,6 +65,7 @@
 			this.button2.TabIndex = 2;
 			this.button2.Text = "button2";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// button3
 			// 
@@ -72,6 +75,7 @@
 			this.button3.TabIndex = 3;
 			this.button3.Text = "button3";
 			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// textBox2
 			// 
@@ -93,7 +97,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(148, 85);
+			this.label2.Location = new System.Drawing.Point(148, 53);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(71, 12);
 			this.label2.TabIndex = 6;
@@ -102,7 +106,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(148, 305);
+			this.label3.Location = new System.Drawing.Point(148, 88);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(33, 12);
 			this.label3.TabIndex = 7;
