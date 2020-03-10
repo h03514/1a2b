@@ -20,77 +20,43 @@ namespace _1a2b
 		private int[] ans = new int[10];
 		private string[] gnum = new string[10];
 		private int tmp,r;
-		private Random random = new Random();
 
-	
+		private List<int> nums = new List<int>();
+		private List<string> ts = new List<string>();
+		private Random random = new Random();
+		
+		
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			label1.Text = "請輸入 4 個數字";
-			label2.Text = "目前輸入 " + textBox1.TextLength.ToString() + " 字";
-			label3.Text = "";
-
-			button1.Text = "確定";
+			button1.Text = "確認";
 			button2.Text = "看答案";
 			button3.Text = "重玩";
-			
-			for(int i=0; i<10; i++)
+
+			for(int i = 0; i < 10; i++)
 			{
-				ans[i] = i;
+				nums[i] = i;
 			}
-			
-			for(int i =0; i < 10; i++)
+
+			for(int i = 0; i < 10; i++)
 			{
 				r = random.Next(0, 10 - i);
-				tmp = ans[r];
-				ans[r] = ans[9 - i];
-				ans[9 - i] = tmp;
+				tmp = nums[r];
+				nums[r] = nums[9 - i];
+				nums[9 - i] = tmp;
 			}
+		
 			
+
 		}
 		string num;
 
 		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
-			label2.Text = "目前輸入 " + textBox1.TextLength.ToString() + " 字";
+			
 		}
 
-		private void button2_Click(object sender, EventArgs e)
-		{
-			label3.Text = "";
-			for (int i = 1; i <= 4; i++) { label3.Text += ans[i]; }
-		}
-
-		private void textBox1_KeyDown(object sender, KeyEventArgs e)
-		{
-			if(e.KeyCode==Keys.Enter&& button1.Enabled == true)
-			{
-				button1_Click(sender, e);
-				textBox1.Focus();
-				textBox1.SelectAll();
-				//e.SuppressKeyPress = true;
-			}
-		}
-
-		private void button3_Click(object sender, EventArgs e)
-		{
-			label2.Text = "";
-			textBox1.Text = "";
-			textBox2.Text = "";
-			label3.Text = "";
-			button1.Enabled = true;
-			for (int i = 0; i < 10; i++)
-			{
-				r = random.Next(0, 10 - i);
-				tmp = ans[r];
-				ans[r] = ans[9 - i];
-				ans[9 - i] = tmp;
-			}
-			for (int j = 1; j <= 4; j++)
-			{ gnum[j] = ""; }
-		}
-
-		private void button1_Click(object sender, EventArgs e)
+		private void button1_Click_1(object sender, EventArgs e)
 		{
 			int a = 0, b = 0;
 			if (textBox1.TextLength != 4)
@@ -125,7 +91,7 @@ namespace _1a2b
 						}
 					}
 
-					textBox2.Text += num + "--"+ a.ToString() + "A" + b.ToString() + "B" + "\r\n";
+					textBox2.Text += num + "--" + a.ToString() + "A" + b.ToString() + "B" + "\r\n";
 					label3.Text = "你已經猜了" + (textBox2.Lines.Length - 1) + "次了";
 					textBox1.Focus(); textBox1.SelectAll();
 					num = "";
@@ -142,5 +108,6 @@ namespace _1a2b
 				}
 			}
 		}
+
 	}
 }
